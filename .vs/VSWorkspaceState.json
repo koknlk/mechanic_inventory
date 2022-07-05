@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\api_service",
+    "\\front_end_mvc_dot_net_framework",
+    "\\front_end_mvc_dot_net_framework\\App_Start",
+    "\\front_end_mvc_dot_net_framework\\Controllers",
+    "\\front_end_mvc_dot_net_framework\\Models",
+    "\\front_end_mvc_dot_net_framework\\Views",
+    "\\front_end_mvc_dot_net_framework\\Views\\Shared"
+  ],
+  "SelectedNode": "\\front_end_mvc_dot_net_framework\\Controllers\\ToolsCheckOutController.cs",
+  "PreviewInSolutionExplorer": false
+}

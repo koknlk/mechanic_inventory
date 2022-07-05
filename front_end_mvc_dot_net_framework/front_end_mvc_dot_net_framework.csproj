@@ -124,7 +124,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MechanicController.cs" />
     <Compile Include="Controllers\MechanicsToolsController.cs" />
     <Compile Include="Controllers\ToolsCheckOutController.cs" />
@@ -169,16 +168,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Mechanic\Index.cshtml" />
     <Content Include="Views\Mechanic\AddOrUpdate.cshtml" />
     <Content Include="Views\MechanicsTools\Index.cshtml" />
     <Content Include="Views\MechanicsTools\AddOrUpdate.cshtml" />
     <Content Include="Views\ToolsCheckOut\Index.cshtml" />
-    <Content Include="Views\ToolsCheckOut\mechanic.cshtml" />
-    <Content Include="Views\ToolsCheckOut\partName.cshtml" />
     <Content Include="Views\ToolsCheckOut\CheckOut.cshtml" />
   </ItemGroup>
   <ItemGroup>

@@ -13,7 +13,10 @@ namespace front_end_mvc_dot_net_framework.Controllers
         // GET: ToolsCheckOut
         public ActionResult Index()
         {
-
+            IEnumerable<Mechanic> mechanicEmplo;
+            HttpResponseMessage responseCall1 = ApiConnection.webApiClient.GetAsync("Mechanic").Result;
+            mechanicEmplo = responseCall1.Content.ReadAsAsync<IEnumerable<Mechanic>>().Result;
+            dynamic mechanicEmplo1 = ViewBag.mechanicEmplo;
 
             IEnumerable<ToolCheckOut> mechanicEmployees;
             HttpResponseMessage responseCall = ApiConnection.webApiClient.GetAsync("ToolsCheckOut").Result;
@@ -32,7 +35,7 @@ namespace front_end_mvc_dot_net_framework.Controllers
             else
             {
                 HttpResponseMessage response = ApiConnection.webApiClient.GetAsync("ToolsCheckOut/" + id.ToString()).Result;
-                return View(response.Content.ReadAsAsync<Mechanic>().Result);
+                return View(response.Content.ReadAsAsync<ToolCheckOut>().Result);
             }
 
         }
@@ -40,7 +43,7 @@ namespace front_end_mvc_dot_net_framework.Controllers
         //Post checkout to db
 
         [HttpPost]
-        public ActionResult CheckOut(Mechanic toolsCheckOut)
+        public ActionResult CheckOut(ToolCheckOut toolsCheckOut)
         {
             if (toolsCheckOut.id == 0)
             {
