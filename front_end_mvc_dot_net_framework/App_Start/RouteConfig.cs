@@ -16,7 +16,7 @@ namespace front_end_mvc_dot_net_framework
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "ToolsCheckOut", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
