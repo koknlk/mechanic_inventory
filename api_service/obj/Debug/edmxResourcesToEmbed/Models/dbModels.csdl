@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="toolsInventoryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="mechanic">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="phoneNumber" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="mechanic_tools">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="partName" Type="String" MaxLength="60" FixedLength="true" Unicode="true" />
+    <Property Name="partType" Type="String" MaxLength="70" FixedLength="true" Unicode="true" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="toolsInventoryDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="mechanics" EntityType="Self.mechanic" />
+    <EntitySet Name="mechanic_tools" EntityType="Self.mechanic_tools" />
+  </EntityContainer>
+</Schema>

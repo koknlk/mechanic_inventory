@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="toolsInventoryModelStoreContainer" CdmEntityContainer="toolsInventoryDB">
+    <EntitySetMapping Name="mechanics">
+      <EntityTypeMapping TypeName="toolsInventoryModel.mechanic">
+        <MappingFragment StoreEntitySet="mechanic">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mechanic_tools">
+      <EntityTypeMapping TypeName="toolsInventoryModel.mechanic_tools">
+        <MappingFragment StoreEntitySet="mechanic_tools">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="partName" ColumnName="partName" />
+          <ScalarProperty Name="partType" ColumnName="partType" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

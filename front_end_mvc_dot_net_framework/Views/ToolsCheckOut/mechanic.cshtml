@@ -1,0 +1,15 @@
+﻿@model IEnumerable<front_end_mvc_dot_net_framework.Models.Mechanic>
+@{ 
+    ViewBag.Title = "Database";
+}
+
+<select>
+    <option value="" selected disabled>Please select mechanic</option>
+    @foreach (var item in Model)
+    {
+        <option>@item.firstName</option>
+    }
+</select>
+
+
+
